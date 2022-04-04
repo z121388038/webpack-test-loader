@@ -2,6 +2,7 @@
 
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CreateFileMd = require('./plugins/create-file-md')
 
 module.exports = {
     mode: 'development',
@@ -45,7 +46,9 @@ module.exports = {
             //     removeComments: true,       //移除注释
             //     collapseWhitespace: true    //移除空格
             // }
-        })
+        }),
+
+        new CreateFileMd()
     ]
 }
 

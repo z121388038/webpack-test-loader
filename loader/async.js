@@ -10,6 +10,6 @@ module.exports = function (content, map, meta) {
     if(showCompileTime) {
         content = `// 项目编译时间：${new Date()}\n${content}`
     }
-    console.log(content)
+    // console.log(content)
     callback(null, content, map, meta)
 }
